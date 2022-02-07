@@ -3,10 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package presentation_layer;
-import data_access_layer.EmployeeDatabase;
 
+import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.Objects;
 import java.util.Scanner;
+import data_access_layer.EmployeeDbTest;
 import data_access_layer.EmployeeDbTest;
 /**
  *
@@ -43,6 +45,6 @@ public class PayrollSystem {
             System.out.println("Enter correct command.");
         }
     }
-        
+
 
 }
