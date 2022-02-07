@@ -22,7 +22,7 @@ public class PayrollSystem {
 //        System.out.println("Username is: " + userName);  // Output user input
 
         System.out.println("Welcome to Company Inc. Payroll System...");
-        System.out.println(EmployeeDatabase.getHourly_employees_arr());
+
     }
         
 

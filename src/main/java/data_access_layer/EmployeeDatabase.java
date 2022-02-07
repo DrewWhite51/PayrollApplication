@@ -13,38 +13,37 @@ import java.util.ArrayList;
  * @author drewm
  */
 public class EmployeeDatabase {
-    
-    
-    public static ArrayList<Employee> hourly_employees_arr = new ArrayList<Employee>();
-    public static ArrayList<Employee> salary_employees_arr = new ArrayList<Employee>();
-    
 
     public static void main(String[] args) {
-        
-  
-        
+        ArrayList<HourlyEmployee> hourly_employees_arr = new ArrayList<HourlyEmployee>();
+        ArrayList<SalaryEmployee> salary_employees_arr = new ArrayList<SalaryEmployee>();
+
+        SalaryEmployee s1 = new SalaryEmployee(100000,"Drew", "White", 1, 6789);
+        SalaryEmployee s2 = new SalaryEmployee(50000,"Dylan", "White", 2, 5837);
+        SalaryEmployee s3 = new SalaryEmployee(50000,"Rachael", "White", 3, 3813);
+
+
 //        Adding employees to hourly employee array
-        Employee Deonna = new HourlyEmployee(15,20,"Deonna", "Hunt", 4, 4321);
-//        hourly_employee_arr[1] = new HourlyEmployee(15,20,"Ali", "Vanzant", 2, 1234);
+
+
         
-//        salary_employee_arr[0] = new SalaryEmployee(100000,"Dylan", "White", 3, 5412);
-//        salary_employee_arr[1] = new SalaryEmployee(100000,"Drew", "White", 1, 6789);
-        
-        hourly_employees_arr.add(Deonna);
-        
-        
+        salary_employees_arr.add(s1);
+        salary_employees_arr.add(s2);
+        salary_employees_arr.add(s3);
+
+
+//        Looping through all the salaried emnployees
+        for (int i = 0; i<salary_employees_arr.size(); i++) {
+            System.out.println("-------");
+            System.out.println(salary_employees_arr.get(i).getAnnualSalary());
+            System.out.println(salary_employees_arr.get(i).firstName);
+            System.out.println(salary_employees_arr.get(i).lastName);
+            System.out.println(salary_employees_arr.get(i).employeeId);
+            System.out.println(salary_employees_arr.get(i).socialSecurityNumber);
+
+        }
+
+
     }
 
-    public static ArrayList<Employee> getHourly_employees_arr() {
-        return hourly_employees_arr;
-    }
-
-    public static ArrayList<Employee> getSalary_employees_arr() {
-        return salary_employees_arr;
-    }
-
-
-    
-       
-    
 }
