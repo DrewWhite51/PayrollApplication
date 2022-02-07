@@ -20,18 +20,11 @@ public class PayrollSystem {
 //        String userName = myObj.nextLine();  // Read user input
 //        System.out.println("Username is: " + userName);  // Output user input
 
-        Employee Drew = new Employee("Drew", "White",1,6789);
         HourlyEmployee Deonna = new HourlyEmployee(15,20,"Deonna", "Hunt", 4, 4321);
         HourlyEmployee Ali = new HourlyEmployee(15,20,"Ali", "Vanzant", 2, 1234);
         SalaryEmployee Dylan = new SalaryEmployee(100000,"Dylan", "White", 3, 5412);
         
-        System.out.println(calculateHourlyPay(Deonna));
+    }
         
-       
-    }
-    
-    public static boolean calculateHourlyPay(HourlyEmployee employee) {
-        return "Ali".equals(employee.firstName);
-    }
-    
+
 }

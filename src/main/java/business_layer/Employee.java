@@ -8,7 +8,7 @@ package business_layer;
  *
  * @author drewm
  */
-public class Employee {
+public abstract class Employee {
      public String firstName;
      public String lastName;
      public double employeeId;
@@ -69,9 +69,9 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" + "firstName=" + firstName + ", lastName=" + lastName + '}';
+        return "Employee{" + "firstName=" + firstName + ", lastName=" + lastName + ", employeeId=" + employeeId + ", socialSecurityNumber=" + socialSecurityNumber + '}';
     }
     
-   
+    
 }
 

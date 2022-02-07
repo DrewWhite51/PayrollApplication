@@ -10,7 +10,7 @@ package business_layer;
  */
 public class SalaryEmployee extends Employee {
     
-    public double annualSalary;
+    private double annualSalary;
 
     public SalaryEmployee(double annualSalary, String firstName, String lastName, double employeeId, double socialSecurityNumber) {
         super(firstName, lastName, employeeId, socialSecurityNumber);
