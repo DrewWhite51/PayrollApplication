@@ -6,6 +6,7 @@ package presentation_layer;
 import business_layer.Employee;
 import business_layer.HourlyEmployee;
 import business_layer.SalaryEmployee;
+import data_access_layer.EmployeeDatabase;
 import java.util.Scanner;
 /**
  *
@@ -20,10 +21,8 @@ public class PayrollSystem {
 //        String userName = myObj.nextLine();  // Read user input
 //        System.out.println("Username is: " + userName);  // Output user input
 
-        HourlyEmployee Deonna = new HourlyEmployee(15,20,"Deonna", "Hunt", 4, 4321);
-        HourlyEmployee Ali = new HourlyEmployee(15,20,"Ali", "Vanzant", 2, 1234);
-        SalaryEmployee Dylan = new SalaryEmployee(100000,"Dylan", "White", 3, 5412);
-        
+        System.out.println("Welcome to Company Inc. Payroll System...");
+        System.out.println(EmployeeDatabase.getHourly_employees_arr());
     }
         
 
