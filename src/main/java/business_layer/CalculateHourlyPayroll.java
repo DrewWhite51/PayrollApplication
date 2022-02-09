@@ -1,17 +1,18 @@
 package business_layer;
-import data_access_layer.EmployeeDbTest;
+import data_access_layer.EmployeeDatabase;
+import data_access_layer.EmployeeDatabase;
 import data_access_layer.TimecardDatabase;
 
 
 public class CalculateHourlyPayroll {
 
     public static void main(String[] args) {
-        EmployeeDbTest.main(args);
+        EmployeeDatabase.main(args);
         TimecardDatabase.main(args);
 
-        double h1_pay = calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(0), EmployeeDbTest.get_hourly_employees().get(0));
-        double h2_pay = calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(1),EmployeeDbTest.get_hourly_employees().get(1));
-        double h3_pay = calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(2),EmployeeDbTest.get_hourly_employees().get(2));
+        double h1_pay = calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(0), EmployeeDatabase.get_hourly_employees().get(0));
+        double h2_pay = calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(1),EmployeeDatabase.get_hourly_employees().get(1));
+        double h3_pay = calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(2),EmployeeDatabase.get_hourly_employees().get(2));
 
 
 
