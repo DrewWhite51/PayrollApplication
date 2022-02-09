@@ -39,9 +39,10 @@ public class HourlyEmployee extends Employee{
         this.overtimeRate = overtimeRate;
     }
 
+
     @Override
     public String toString() {
-        return "HourlyEmployee{" + "hourlyRate=" + hourlyRate + ", overtimeRate=" + overtimeRate + '}';
+        return "HourlyEmployee{" +"firstName=" + firstName + ", lastName=" + lastName + ", employeeId=" + employeeId + ", socialSecurityNumber=" + socialSecurityNumber + "hourlyRate=" + hourlyRate + ", overtimeRate=" + overtimeRate + '}';
     }
 
     

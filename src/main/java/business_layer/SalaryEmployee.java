@@ -33,7 +33,7 @@ public class SalaryEmployee extends Employee {
    
     @Override
     public String toString() {
-        return "SalaryEmployee{" + "annualSalary=" + annualSalary + '}';
+        return "SalaryEmployee{" + "firstName=" + firstName + ", lastName=" + lastName + ", employeeId=" + employeeId + ", socialSecurityNumber=" + socialSecurityNumber + "annualSalary=" + annualSalary + '}';
     }
 
     

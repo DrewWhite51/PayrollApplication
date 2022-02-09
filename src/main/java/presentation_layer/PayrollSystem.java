@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Objects;
 import java.util.Scanner;
-import data_access_layer.EmployeeDbTest;
-import data_access_layer.EmployeeDbTest;
+import data_access_layer.EmployeeDatabase;
+import data_access_layer.EmployeeDatabase;
 /**
  *
  * @author drewm
@@ -20,31 +20,35 @@ public class PayrollSystem {
         Scanner myObj = new Scanner(System.in);
 
         // Runs the main method of the database class to fill the databases
-        EmployeeDbTest.main(args);
+        EmployeeDatabase.main(args);
 
-        // Initial prompt to retrieve the desired data
+//         Initial prompt to retrieve the desired data
         System.out.println("Welcome to Company Inc. Payroll System..." + "\r\n" +
-                "To get total number of employees enter 1." + "\r\n" +
-                "To get total number of hourly employees enter 2." + "\r\n" +
-                "To get total number of salaries employees enter 3." + "\r\n" +
-                "To list out the hourly employees enter 4" + "\r\n" +
-                "To list out the salaries employees enter 5"
+                "To exit the program enter 0" + "\r\n" +
+                "To get the employees in our system enter 1." + "\r\n" +
+                "To get total payroll of hourly employees enter 2." + "\r\n"
         );
         System.out.println("Enter command here ---> ");
-        // Scanner object reads the input from the user
+//         Scanner object reads the input from the user
         String user_input = myObj.nextLine();
 
-        // If statement to return the desired input of the user
-        if (Objects.equals(user_input, "1")) {
-            System.out.println(EmployeeDbTest.get_total_employees_in_database());
-        } else if (Objects.equals(user_input, "2")) {
-            System.out.println(EmployeeDbTest.get_total_hourly_employees());
-        } else if (Objects.equals(user_input, "3")) {
-            System.out.println(EmployeeDbTest.get_total_salaried_employees());
+
+
+
+        if (Objects.equals(user_input, "0")) {
+            System.out.println("Thank you for using the program ");
+        } else if (Objects.equals(user_input, "1")) {
+            for (int i = 0;i<EmployeeDatabase.get_hourly_employees().size();i++){
+                System.out.println(EmployeeDatabase.get_hourly_employees().get(i).toString());
+                System.out.println(EmployeeDatabase.get_salaried_employees().get(i).toString());
+            }
         } else {
-            System.out.println("Enter correct command.");
+            System.out.println("Try again later");
         }
+
+
     }
+
 
 
 }
