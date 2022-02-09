@@ -1,12 +1,11 @@
 package data_access_layer;
 
-import business_layer.Employee;
 import business_layer.HourlyEmployee;
 import business_layer.SalaryEmployee;
 
 import java.util.ArrayList;
 
-public class EmployeeDbTest {
+public class EmployeeDatabase {
 
     static ArrayList<HourlyEmployee> hourly_employees_arr = new ArrayList<HourlyEmployee>();
     static ArrayList<SalaryEmployee> salary_employees_arr = new ArrayList<SalaryEmployee>();

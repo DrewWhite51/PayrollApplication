@@ -9,23 +9,38 @@ public class CalculateHourlyPayroll {
         EmployeeDbTest.main(args);
         TimecardDatabase.main(args);
 
+        double h1_pay = calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(0), EmployeeDbTest.get_hourly_employees().get(0));
+        double h2_pay = calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(1),EmployeeDbTest.get_hourly_employees().get(1));
+        double h3_pay = calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(2),EmployeeDbTest.get_hourly_employees().get(2));
 
 
-/*
-        for (int i=0; i<TimecardDatabase.getTimecards_arr().size();i++) {
-            System.out.println(TimecardDatabase.getTimecards_arr().get(i));
+
+        System.out.println(h1_pay);
+        System.out.println(h2_pay);
+        System.out.println(h3_pay);
+
+    }
+
+
+    // Method to calculate the pay for individual hourly employees
+    public static double calculate_hourly_payroll_for_employee(Timecard timecard, HourlyEmployee hourlyEmployee) {
+        // If statement to validate that employee ids match in the timecard database and the hourly employee database
+        if (timecard.employeeId == hourlyEmployee.employeeId) {
+            return ((timecard.hoursWorked*hourlyEmployee.hourlyRate)+ (timecard.overtimeHours*hourlyEmployee.overtimeRate));
+        } else {
+            return 0;
         }
-        System.out.println(EmployeeDbTest.get_hourly_employees().get(0));
-*/
-
-        System.out.println(calculate_hourly_payroll(TimecardDatabase.getTimecards_arr().get(0),EmployeeDbTest.get_hourly_employees().get(0)));
-
 
     }
 
-    public static double calculate_hourly_payroll(Timecard timecard, HourlyEmployee hourlyEmployee) {
-        return ((timecard.hoursWorked*hourlyEmployee.hourlyRate)+ (timecard.overtimeHours*hourlyEmployee.overtimeRate));
-    }
+//    public static double calculate_total_hourly_payroll() {
+//        for (int i=0; i<TimecardDatabase.getTimecards_arr().size();i++) {
+//            System.out.println(TimecardDatabase.getTimecards_arr().get(i));
+//        }
+//        System.out.println(EmployeeDbTest.get_hourly_employees().get(0));
+//    }
+
+
 
 
 }
