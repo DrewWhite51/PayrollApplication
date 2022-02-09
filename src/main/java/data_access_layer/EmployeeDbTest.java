@@ -27,29 +27,6 @@ public class EmployeeDbTest {
         hourly_employees_arr.add(h1);
         hourly_employees_arr.add(h2);
         hourly_employees_arr.add(h3);
-        // Looping through all the salaried emnployees
-//        for (int i = 0; i<salary_employees_arr.size(); i++) {
-//            System.out.println("-------");
-//            System.out.println(salary_employees_arr.get(i));
-//            System.out.println(salary_employees_arr.get(i).getAnnualSalary());
-//            System.out.println(salary_employees_arr.get(i).firstName);
-//            System.out.println(salary_employees_arr.get(i).lastName);
-//            System.out.println(salary_employees_arr.get(i).employeeId);
-//            System.out.println(salary_employees_arr.get(i).socialSecurityNumber);
-//
-//        }
-        //  Looping through all the hourly emnployees
-//        for (int i = 0; i<hourly_employees_arr.size(); i++) {
-//            System.out.println("-------");
-//            System.out.println(hourly_employees_arr.get(i));
-//            System.out.println(hourly_employees_arr.get(i).getHourlyRate());
-//            System.out.println(hourly_employees_arr.get(i).getOvertimeRate());
-//            System.out.println(hourly_employees_arr.get(i).firstName);
-//            System.out.println(hourly_employees_arr.get(i).lastName);
-//            System.out.println(hourly_employees_arr.get(i).employeeId);
-//            System.out.println(hourly_employees_arr.get(i).socialSecurityNumber);
-//
-//        }
     }
 
     public static int get_total_salaried_employees(){
@@ -58,6 +35,10 @@ public class EmployeeDbTest {
 
     public static int get_total_hourly_employees(){
         return hourly_employees_arr.size();
+    }
+
+    public static ArrayList<HourlyEmployee> get_hourly_employees() {
+        return hourly_employees_arr;
     }
 
     public static int get_total_employees_in_database(){
