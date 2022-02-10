@@ -11,13 +11,13 @@ package business_layer;
 public class Withholding {
     public double id;
     public String description;
-    public double amount;
-    public int rate;
+    public double rate;
 
-    public Withholding(double id, String description, double amount, int rate) {
+
+
+    public Withholding(double id, String description, double rate) {
         this.id = id;
         this.description = description;
-        this.amount = amount;
         this.rate = rate;
     }
 
@@ -37,15 +37,7 @@ public class Withholding {
         this.description = description;
     }
 
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public int getRate() {
+    public double getRate() {
         return rate;
     }
 
@@ -55,7 +47,7 @@ public class Withholding {
 
     @Override
     public String toString() {
-        return "Withholding{" + "id=" + id + ", description=" + description + ", amount=" + amount + ", rate=" + rate + '}';
+        return "Withholding{" + "id=" + id + ", description=" + description + ", rate=" + rate + '}';
     }
     
     
