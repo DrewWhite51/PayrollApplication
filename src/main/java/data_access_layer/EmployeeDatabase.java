@@ -41,8 +41,4 @@ public class EmployeeDatabase {
 // Method that returns an ArrayList for all salaried employees
     public static ArrayList<SalaryEmployee> get_salaried_employees() {return salary_employees_arr;}
 
-//Method to get the total number of employees in the database
-    public static int get_total_employees_in_database(){return salary_employees_arr.size()+hourly_employees_arr.size();}
-
-
 }

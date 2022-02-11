@@ -11,40 +11,17 @@ public class TimecardDatabase {
     static Timecard h2_timecard = new Timecard("2/7/22",5,40,10);
     static Timecard h3_timecard = new Timecard("2/7/22",6,40,10);
 
+//    Main method to add the timecards to a database
     public static void main(String[] args) {
         timecards_arr.add(h1_timecard);
         timecards_arr.add(h2_timecard);
         timecards_arr.add(h3_timecard);
 
     }
-
+//    Method to return the ArraryList of timecards
     public static ArrayList<Timecard> getTimecards_arr() {return timecards_arr;}
-
+// Method to manually set Timecards in the Timecard ArrayList
     public static void setTimecards_arr(ArrayList<Timecard> timecards_arr) {
         TimecardDatabase.timecards_arr = timecards_arr;
-    }
-
-    public static Timecard getH1_timecard() {
-        return h1_timecard;
-    }
-
-    public static void setH1_timecard(Timecard h1_timecard) {
-        TimecardDatabase.h1_timecard = h1_timecard;
-    }
-
-    public static Timecard getH2_timecard() {
-        return h2_timecard;
-    }
-
-    public static void setH2_timecard(Timecard h2_timecard) {
-        TimecardDatabase.h2_timecard = h2_timecard;
-    }
-
-    public static Timecard getH3_timecard() {
-        return h3_timecard;
-    }
-
-    public static void setH3_timecard(Timecard h3_timecard) {
-        TimecardDatabase.h3_timecard = h3_timecard;
     }
 }

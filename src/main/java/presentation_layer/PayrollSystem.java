@@ -39,22 +39,6 @@ public class PayrollSystem {
 
 
 
-        if (Objects.equals(user_input, "0")) {
-            System.out.println("Thank you for using the program ");
-        } else if (Objects.equals(user_input, "1")) {
-            for (int i = 0;i<EmployeeDatabase.get_hourly_employees().size();i++){
-                System.out.println(EmployeeDatabase.get_hourly_employees().get(i).toString());
-                System.out.println(EmployeeDatabase.get_salaried_employees().get(i).toString());
-            }
-        } else if (Objects.equals(user_input, "2")) {
-            for (int i = 0;i<EmployeeDatabase.get_hourly_employees().size();i++){
-                System.out.println(CalculatePayroll.calculate_hourly_payroll_for_employee(TimecardDatabase.getTimecards_arr().get(i), EmployeeDatabase.get_hourly_employees().get(i)));
-            }
-        } else {
-            System.out.println("Try again later");
-        }
-
-
     }
 
 
