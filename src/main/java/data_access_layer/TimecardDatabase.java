@@ -18,7 +18,33 @@ public class TimecardDatabase {
 
     }
 
-    public static ArrayList<Timecard> getTimecards_arr() {
-        return timecards_arr;
+    public static ArrayList<Timecard> getTimecards_arr() {return timecards_arr;}
+
+    public static void setTimecards_arr(ArrayList<Timecard> timecards_arr) {
+        TimecardDatabase.timecards_arr = timecards_arr;
+    }
+
+    public static Timecard getH1_timecard() {
+        return h1_timecard;
+    }
+
+    public static void setH1_timecard(Timecard h1_timecard) {
+        TimecardDatabase.h1_timecard = h1_timecard;
+    }
+
+    public static Timecard getH2_timecard() {
+        return h2_timecard;
+    }
+
+    public static void setH2_timecard(Timecard h2_timecard) {
+        TimecardDatabase.h2_timecard = h2_timecard;
+    }
+
+    public static Timecard getH3_timecard() {
+        return h3_timecard;
+    }
+
+    public static void setH3_timecard(Timecard h3_timecard) {
+        TimecardDatabase.h3_timecard = h3_timecard;
     }
 }
