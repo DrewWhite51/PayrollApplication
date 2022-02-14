@@ -32,9 +32,32 @@ public class PayrollDatabase {
                 CalculatePayroll.calc_hourly_employee_tax_withholdings(TimecardDatabase.getTimecards_arr().get(2), EmployeeDatabase.get_hourly_employees().get(2)),
                 CalculatePayroll.calculate_net_pay_for_hourly_employee(TimecardDatabase.getTimecards_arr().get(2), EmployeeDatabase.get_hourly_employees().get(2)));
 
+        Payroll s1_year_pay = new Payroll("12/31/2020",
+                EmployeeDatabase.s1.employeeId,
+                EmployeeDatabase.s1.getAnnualSalary(),
+                CalculatePayroll.calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(0)),
+                CalculatePayroll.calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(0)));
+
+        Payroll s2_year_pay = new Payroll("12/31/2020",
+                EmployeeDatabase.s2.employeeId,
+                EmployeeDatabase.s2.getAnnualSalary(),
+                CalculatePayroll.calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(1)),
+                CalculatePayroll.calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(1)));
+
+        Payroll s3_year_pay = new Payroll("12/31/2020",
+                EmployeeDatabase.s3.employeeId,
+                EmployeeDatabase.s3.getAnnualSalary(),
+                CalculatePayroll.calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(2)),
+                CalculatePayroll.calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(2)));
+
+
+
         payroll_arr.add(h1_first_pay);
         payroll_arr.add(h2_first_pay);
         payroll_arr.add(h3_first_pay);
+        payroll_arr.add(s1_year_pay);
+        payroll_arr.add(s2_year_pay);
+        payroll_arr.add(s3_year_pay);
     }
 
     public static ArrayList<Payroll> getPayroll_arr() {

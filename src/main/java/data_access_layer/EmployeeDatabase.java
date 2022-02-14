@@ -11,7 +11,7 @@ public class EmployeeDatabase {
     static ArrayList<SalaryEmployee> salary_employees_arr = new ArrayList<SalaryEmployee>();
 // Instantiating instances of SalaryEmployees
     static SalaryEmployee s1 = new SalaryEmployee(100000,"Drew", "White", 1, 6789);
-    static SalaryEmployee s2 = new SalaryEmployee(50000,"Dylan", "White", 2, 5837);
+    static SalaryEmployee s2 = new SalaryEmployee(70000,"Dylan", "White", 2, 5837);
     static SalaryEmployee s3 = new SalaryEmployee(50000,"Rachael", "White", 3, 3813);
 // Instantiating instances of Hourly Employees
     static HourlyEmployee h1 = new HourlyEmployee(20,30,"Ali", "Vanzant",4,3795);

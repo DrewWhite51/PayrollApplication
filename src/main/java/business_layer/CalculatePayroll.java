@@ -23,7 +23,22 @@ public class CalculatePayroll {
         double h3_gross_pay = calculate_gross_pay_for_hourly_employee(TimecardDatabase.getTimecards_arr().get(2),EmployeeDatabase.get_hourly_employees().get(2));
         double h3_tax_withholdings = calc_hourly_employee_tax_withholdings(TimecardDatabase.getTimecards_arr().get(2), EmployeeDatabase.get_hourly_employees().get(2));
 
+        double s1_gross_pay = calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(0));
+        double s1_tax_withholdings = calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(0));
 
+        double s2_gross_pay = calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(1));
+        double s2_tax_withholdings = calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(1));
+
+        double s3_gross_pay = calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(2));
+        double s3_tax_withholdings = calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(2));
+
+
+//        System.out.println(s1_gross_pay);
+//        System.out.println(s1_tax_withholdings);
+//        System.out.println(s2_gross_pay);
+//        System.out.println(s2_tax_withholdings);
+//        System.out.println(s3_gross_pay);
+//        System.out.println(s3_tax_withholdings);
     }
 
     public static double calculate_gross_pay_for_hourly_employee(Timecard timecard, HourlyEmployee hourlyEmployee){
@@ -42,8 +57,6 @@ public class CalculatePayroll {
         double employee_wages = ((timecard.hoursWorked*hourlyEmployee.hourlyRate) + (timecard.overtimeHours*hourlyEmployee.overtimeRate));
         double federal_tax_withholding = employee_wages*federal_income_tax;
         double state_tax_withholding = employee_wages*state_income_tax;
-
-
 
         // If statement to validate that employee ids match in the timecard database and the hourly employee database
         if (timecard.employeeId == hourlyEmployee.employeeId) {

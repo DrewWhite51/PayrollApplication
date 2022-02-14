@@ -10,6 +10,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 import business_layer.CalculatePayroll;
+import business_layer.Payroll;
 import data_access_layer.EmployeeDatabase;
 import data_access_layer.EmployeeDatabase;
 import data_access_layer.PayrollDatabase;
@@ -30,6 +31,9 @@ public class PayrollSystem {
         System.out.println(PayrollDatabase.getPayroll_arr().get(0));
         System.out.println(PayrollDatabase.getPayroll_arr().get(1));
         System.out.println(PayrollDatabase.getPayroll_arr().get(2));
+        System.out.println(PayrollDatabase.getPayroll_arr().get(3));
+        System.out.println(PayrollDatabase.getPayroll_arr().get(4));
+        System.out.println(PayrollDatabase.getPayroll_arr().get(5));
 
 
 
