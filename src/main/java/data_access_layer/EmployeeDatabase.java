@@ -1,5 +1,6 @@
 package data_access_layer;
 
+import business_layer.Employee;
 import business_layer.HourlyEmployee;
 import business_layer.SalaryEmployee;
 
@@ -17,6 +18,8 @@ public class EmployeeDatabase {
     static HourlyEmployee h1 = new HourlyEmployee(20,30,"Ali", "Vanzant",4,3795);
     static HourlyEmployee h2 = new HourlyEmployee(30,50,"Deonna", "Hunt",5,3859);
     static HourlyEmployee h3 = new HourlyEmployee(40,60,"Rich", "White",6,4810);
+
+    static ArrayList<Employee> employee_arr = new ArrayList<Employee>();
 //    Adding employees to their respective databases
     public static void main(String[] args) {
         salary_employees_arr.add(s1);
@@ -25,20 +28,37 @@ public class EmployeeDatabase {
         hourly_employees_arr.add(h1);
         hourly_employees_arr.add(h2);
         hourly_employees_arr.add(h3);
+
+        employee_arr.add(s1);
+        employee_arr.add(s2);
+        employee_arr.add(s3);
+        employee_arr.add(h1);
+        employee_arr.add(h2);
+        employee_arr.add(h3);
     }
-// Method to get total number of salaries employees in database
-    public static int get_total_salaried_employees(){
-        return salary_employees_arr.size();
-    }
-// Method to get total number of hourly employees in database
-    public static int get_total_hourly_employees(){
-        return hourly_employees_arr.size();
-    }
+
 // Method that returns an ArrayList for all hourly employeees
     public static ArrayList<HourlyEmployee> get_hourly_employees() {
         return hourly_employees_arr;
     }
 // Method that returns an ArrayList for all salaried employees
     public static ArrayList<SalaryEmployee> get_salaried_employees() {return salary_employees_arr;}
+
+    public static ArrayList<Employee> get_employees() {return employee_arr;}
+
+//    public static Employee get_employee_by_id(int emp_id){
+//
+//            for (int x = 0; x<salary_employees_arr.size();x++){
+//                if (salary_employees_arr.get(x).employeeId == emp_id) {
+//                    return salary_employees_arr.get(x);
+//                } else if (hourly_employees_arr.get(x).employeeId == emp_id){
+//                    return hourly_employees_arr.get(x);
+//                }
+//            }
+//
+//        return null;
+//
+//    }
+
 
 }

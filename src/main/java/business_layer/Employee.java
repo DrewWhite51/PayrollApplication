@@ -11,10 +11,10 @@ package business_layer;
 public abstract class Employee {
      public String firstName;
      public String lastName;
-     public double employeeId;
+     public int employeeId;
      public double socialSecurityNumber;
 
-    public Employee(String firstName, String lastName, double employeeId, double socialSecurityNumber) {
+    public Employee(String firstName, String lastName, int employeeId, double socialSecurityNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.employeeId = employeeId;
@@ -23,10 +23,6 @@ public abstract class Employee {
 
     public double getEmployeeId() {
         return employeeId;
-    }
-
-    public void setEmployeeId(double employeeId) {
-        this.employeeId = employeeId;
     }
 
     public double getSocialSecurityNumber() {
@@ -40,15 +36,9 @@ public abstract class Employee {
     public void setSocialSecurityNumber(double socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
     }
-     
-     
+
     public static void main(String[] args) {
         System.out.println("Employee Class");
-    }
-
-    public Employee(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
     public String getFirstName() {

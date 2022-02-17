@@ -1,7 +1,10 @@
 package business_layer;
 import data_access_layer.EmployeeDatabase;
+import data_access_layer.PayrollDatabase;
 import data_access_layer.TimecardDatabase;
 import data_access_layer.WithholdingsDatabase;
+
+import java.util.ArrayList;
 
 public class CalculatePayroll {
 
@@ -32,15 +35,10 @@ public class CalculatePayroll {
         double s3_gross_pay = calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(2));
         double s3_tax_withholdings = calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(2));
 
-
-//        System.out.println(s1_gross_pay);
-//        System.out.println(s1_tax_withholdings);
-//        System.out.println(s2_gross_pay);
-//        System.out.println(s2_tax_withholdings);
-//        System.out.println(s3_gross_pay);
-//        System.out.println(s3_tax_withholdings);
     }
 
+//Method to calculate the gross pay of hourly employees, takes Timecard and Hourly employee arguments to calc
+//    based on what is passed to the method
     public static double calculate_gross_pay_for_hourly_employee(Timecard timecard, HourlyEmployee hourlyEmployee){
         // If statement to validate that employee ids match in the timecard database and the hourly employee database
         if (timecard.employeeId == hourlyEmployee.employeeId) {
@@ -66,6 +64,8 @@ public class CalculatePayroll {
         }
     }
 
+//Method used to calculate the tax withholdings for hourly employees
+// Takes a timecard and HourlyEmployee argument
     public static double calc_hourly_employee_tax_withholdings(Timecard timecard, HourlyEmployee hourlyEmployee){
         double federal_income_tax = WithholdingsDatabase.getFederal_income_tax().rate;
         double state_income_tax = WithholdingsDatabase.getState_income_tax().rate;
@@ -75,6 +75,8 @@ public class CalculatePayroll {
         return federal_tax_withholding + state_tax_withholding;
     }
 
+//    Method to calculate the tax on salaried employee earnings
+//    Since a salaried employee will not have a timecard the only argument passed to this method is a SalaryEmployee
     public static double calc_salaried_employee_tax_withholdings(SalaryEmployee salaryEmployee){
         double federal_income_tax = WithholdingsDatabase.getFederal_income_tax().rate;
         double state_income_tax = WithholdingsDatabase.getState_income_tax().rate;

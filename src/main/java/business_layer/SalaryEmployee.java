@@ -12,15 +12,12 @@ public class SalaryEmployee extends Employee {
     
     private double annualSalary;
 
-    public SalaryEmployee(double annualSalary, String firstName, String lastName, double employeeId, double socialSecurityNumber) {
+    public SalaryEmployee(double annualSalary, String firstName, String lastName, int employeeId, double socialSecurityNumber) {
         super(firstName, lastName, employeeId, socialSecurityNumber);
         this.annualSalary = annualSalary;
     }
 
-    public SalaryEmployee(double annualSalary, String firstName, String lastName) {
-        super(firstName, lastName);
-        this.annualSalary = annualSalary;
-    }
+
 
     public double getAnnualSalary() {
         return annualSalary;
