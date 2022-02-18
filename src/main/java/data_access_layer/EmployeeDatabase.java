@@ -7,6 +7,8 @@ import business_layer.SalaryEmployee;
 import java.util.ArrayList;
 
 public class EmployeeDatabase {
+    // Initializing Arraylist for all employees
+    static ArrayList<Employee> employee_arr = new ArrayList<Employee>();
 //    Initializing ArrayLists for hourly and salaries employees
     static ArrayList<HourlyEmployee> hourly_employees_arr = new ArrayList<HourlyEmployee>();
     static ArrayList<SalaryEmployee> salary_employees_arr = new ArrayList<SalaryEmployee>();
@@ -18,8 +20,6 @@ public class EmployeeDatabase {
     static HourlyEmployee h1 = new HourlyEmployee(20,30,"Ali", "Vanzant",4,3795);
     static HourlyEmployee h2 = new HourlyEmployee(30,50,"Deonna", "Hunt",5,3859);
     static HourlyEmployee h3 = new HourlyEmployee(40,60,"Rich", "White",6,4810);
-
-    static ArrayList<Employee> employee_arr = new ArrayList<Employee>();
 //    Adding employees to their respective databases
     public static void main(String[] args) {
         salary_employees_arr.add(s1);
@@ -43,19 +43,18 @@ public class EmployeeDatabase {
     }
 // Method that returns an ArrayList for all salaried employees
     public static ArrayList<SalaryEmployee> get_salaried_employees() {return salary_employees_arr;}
-
+// Method that returns the arraylist for all employees
     public static ArrayList<Employee> get_employees() {return employee_arr;}
-
+// Method that gets employee by their IDs
     public static Employee get_employee_by_id(int id){
-
+//        Loops through the employee array and tries to find a match with the argument being passed
         for (int i = 0; i<employee_arr.size();i++){
+//            If there is a match return the employee from them database
             if (id == employee_arr.get(i).employeeId){
                 return employee_arr.get(i);
             }
         }
-
-
-
+//        IF method can't find a match return null
         return null;
     }
 
