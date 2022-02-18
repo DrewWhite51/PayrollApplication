@@ -26,35 +26,22 @@ public class PayrollSystem {
     public static void main(String[] args) {
 
 
-        // Runs the main method of the database class to fill the databases
+        // Runs the main method of the database classes to populate the databases
         EmployeeDatabase.main(args);
         PayrollDatabase.main(args);
         CalculatePayroll.main(args);
 
-        double h1_pay = CalculatePayroll.calculate_gross_pay_for_hourly_employee(TimecardDatabase.getTimecards_arr().get(0), EmployeeDatabase.get_hourly_employees().get(0));
-
-        System.out.println(h1_pay);
 
 
-//        for (int i = 0; i<PayrollDatabase.getPayroll_arr().size();i++){
-//            System.out.println("------------------------");
-//            System.out.println(PayrollDatabase.getPayroll_arr().get(i));
-//            int id = (int) PayrollDatabase.getPayroll_arr().get(i).employeeId;
-//
-//        };
+        // Loops through payroll database and employees and displays the correct employee information for each payroll entry in the database
+        for (int i = 0;i<PayrollDatabase.getPayroll_arr().size();i++){
+            System.out.println("-----------------");
+            System.out.println("Payroll information for: ");
 
-//        System.out.println(EmployeeDatabase.get_salaried_employees().get(0).employeeId);
+            System.out.println(PayrollDatabase.getPayroll_arr().get(i));
+        }
 
 
-//        for (int i=1; i<=6;i++){
-//            System.out.println(EmployeeDatabase.get_employee_by_id(i));
-//        }
-
-//        System.out.println(EmployeeDatabase.get_employees().size());
-
-//        for (int i=0;i<EmployeeDatabase.get_employees().size();i++){
-//            System.out.println(EmployeeDatabase.get_employees().get(i));
-//        }
 
 
 

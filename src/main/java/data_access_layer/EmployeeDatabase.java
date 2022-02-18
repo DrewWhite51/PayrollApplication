@@ -46,19 +46,17 @@ public class EmployeeDatabase {
 
     public static ArrayList<Employee> get_employees() {return employee_arr;}
 
-//    public static Employee get_employee_by_id(int emp_id){
-//
-//            for (int x = 0; x<salary_employees_arr.size();x++){
-//                if (salary_employees_arr.get(x).employeeId == emp_id) {
-//                    return salary_employees_arr.get(x);
-//                } else if (hourly_employees_arr.get(x).employeeId == emp_id){
-//                    return hourly_employees_arr.get(x);
-//                }
-//            }
-//
-//        return null;
-//
-//    }
+    public static Employee get_employee_by_id(int id){
+
+        for (int i=0;i<get_employees().size();i++){
+            if (i == id){
+                return employee_arr.get(i);
+            }
+        }
+
+        return null;
+    }
+
 
 
 }
