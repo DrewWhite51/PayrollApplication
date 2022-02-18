@@ -3,20 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package presentation_layer;
-
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Objects;
-import java.util.Scanner;
-
-import business_layer.CalculatePayroll;
-import business_layer.Payroll;
-import business_layer.SalaryEmployee;
-import data_access_layer.EmployeeDatabase;
 import data_access_layer.EmployeeDatabase;
 import data_access_layer.PayrollDatabase;
-import data_access_layer.TimecardDatabase;
-import business_layer.CalculatePayroll;
+
 
 /**
  *
