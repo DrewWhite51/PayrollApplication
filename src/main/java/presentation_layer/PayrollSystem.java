@@ -24,22 +24,19 @@ import business_layer.CalculatePayroll;
  */
 public class PayrollSystem {
     public static void main(String[] args) {
-
-
-        // Runs the main method of the database classes to populate the databases
-        EmployeeDatabase.main(args);
+        // Runs the main method of the payroll database class to populate the databases
         PayrollDatabase.main(args);
-        CalculatePayroll.main(args);
-
 
 
         // Loops through payroll database and employees and displays the correct employee information for each payroll entry in the database
         for (int i = 0;i<PayrollDatabase.getPayroll_arr().size();i++){
             System.out.println("-----------------");
             System.out.println("Payroll information for: ");
-
             System.out.println(PayrollDatabase.getPayroll_arr().get(i));
+            System.out.println(EmployeeDatabase.get_employee_by_id(PayrollDatabase.getPayroll_arr().get(i).employeeId));
+
         }
+
 
 
 

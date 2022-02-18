@@ -9,37 +9,32 @@ package business_layer;
  * @author Drew White
  */
 public class HourlyEmployee extends Employee{
-    
+//    Attributes for HourlyEmployee, extends the attributes from Employee class
     public double hourlyRate;
     public double overtimeRate;
-    
-    public static void main(String[] args) {
-        
-    }
-
+// Constructor for Hourly Employee
     public HourlyEmployee(double hourlyRate, double overtimeRate, String firstName, String lastName, int employeeId, double socialSecurityNumber) {
         super(firstName, lastName, employeeId, socialSecurityNumber);
         this.hourlyRate = hourlyRate;
         this.overtimeRate = overtimeRate;
     }
-
+// Getter for hourly pay rate
     public double getHourlyRate() {
         return hourlyRate;
     }
-
+// Getter for overtime pay rate
     public double getOvertimeRate() {
         return overtimeRate;
     }
-
+// Setter for hourly pay rate
     public void setHourlyRate(double hourlyRate) {
         this.hourlyRate = hourlyRate;
     }
-
+// Setter for Ot payrate
     public void setOvertimeRate(double overtimeRate) {
         this.overtimeRate = overtimeRate;
     }
-
-
+// To string method
     @Override
     public String toString() {
         return "HourlyEmployee{" +"firstName=" + firstName + ", lastName=" + lastName + ", employeeId=" + employeeId + ", socialSecurityNumber=" + socialSecurityNumber + "hourlyRate=" + hourlyRate + ", overtimeRate=" + overtimeRate + '}';

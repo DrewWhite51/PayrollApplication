@@ -48,11 +48,13 @@ public class EmployeeDatabase {
 
     public static Employee get_employee_by_id(int id){
 
-        for (int i=0;i<get_employees().size();i++){
-            if (i == id){
+        for (int i = 0; i<employee_arr.size();i++){
+            if (id == employee_arr.get(i).employeeId){
                 return employee_arr.get(i);
             }
         }
+
+
 
         return null;
     }

@@ -9,28 +9,25 @@ package business_layer;
  * @author drewm
  */
 public class SalaryEmployee extends Employee {
-    
+//    Adding salary employee attribute and extending the employee class
     private double annualSalary;
-
+// Constructor for the Salary Employee
     public SalaryEmployee(double annualSalary, String firstName, String lastName, int employeeId, double socialSecurityNumber) {
         super(firstName, lastName, employeeId, socialSecurityNumber);
         this.annualSalary = annualSalary;
     }
-
-
-
+//    Getter for annual salary
     public double getAnnualSalary() {
         return annualSalary;
     }
-
+// Setter for annual salary
     public void setAnnualSalary(double annualSalary) {
         this.annualSalary = annualSalary;
     }
-
-   
+//    To string for salary employee
     @Override
     public String toString() {
-        return "SalaryEmployee{" + "firstName=" + firstName + ", lastName=" + lastName + ", employeeId=" + employeeId + ", socialSecurityNumber=" + socialSecurityNumber + "annualSalary=" + annualSalary + '}';
+        return "SalaryEmployee{" + "firstName=" + firstName + ", lastName=" + lastName + ", employeeId=" + employeeId + ", socialSecurityNumber=" + socialSecurityNumber + ", annualSalary=" + annualSalary + '}';
     }
 
     

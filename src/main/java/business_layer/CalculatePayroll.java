@@ -13,28 +13,6 @@ public class CalculatePayroll {
         EmployeeDatabase.main(args);
         TimecardDatabase.main(args);
 
-//      Calculating hourly employee pay and tax withholdings
-        double h1_net_pay = calculate_net_pay_for_hourly_employee(TimecardDatabase.getTimecards_arr().get(0), EmployeeDatabase.get_hourly_employees().get(0));
-        double h1_gross_pay = calculate_gross_pay_for_hourly_employee(TimecardDatabase.getTimecards_arr().get(0), EmployeeDatabase.get_hourly_employees().get(0));
-        double h1_tax_withholdings = calc_hourly_employee_tax_withholdings(TimecardDatabase.getTimecards_arr().get(0), EmployeeDatabase.get_hourly_employees().get(0));
-
-        double h2_net_pay = calculate_net_pay_for_hourly_employee(TimecardDatabase.getTimecards_arr().get(1),EmployeeDatabase.get_hourly_employees().get(1));
-        double h2_gross_pay = calculate_gross_pay_for_hourly_employee(TimecardDatabase.getTimecards_arr().get(1),EmployeeDatabase.get_hourly_employees().get(1));
-        double h2_tax_withholdings = calc_hourly_employee_tax_withholdings(TimecardDatabase.getTimecards_arr().get(1), EmployeeDatabase.get_hourly_employees().get(1));
-
-        double h3_net_pay = calculate_net_pay_for_hourly_employee(TimecardDatabase.getTimecards_arr().get(2),EmployeeDatabase.get_hourly_employees().get(2));
-        double h3_gross_pay = calculate_gross_pay_for_hourly_employee(TimecardDatabase.getTimecards_arr().get(2),EmployeeDatabase.get_hourly_employees().get(2));
-        double h3_tax_withholdings = calc_hourly_employee_tax_withholdings(TimecardDatabase.getTimecards_arr().get(2), EmployeeDatabase.get_hourly_employees().get(2));
-
-        double s1_gross_pay = calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(0));
-        double s1_tax_withholdings = calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(0));
-
-        double s2_gross_pay = calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(1));
-        double s2_tax_withholdings = calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(1));
-
-        double s3_gross_pay = calc_salaried_employee_payroll(EmployeeDatabase.get_salaried_employees().get(2));
-        double s3_tax_withholdings = calc_salaried_employee_tax_withholdings(EmployeeDatabase.get_salaried_employees().get(2));
-
     }
 
 //Method to calculate the gross pay of hourly employees, takes Timecard and Hourly employee arguments to calc
